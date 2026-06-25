@@ -1,5 +1,7 @@
-export default function InnerContainer({childern}) {
+export default function InnerContainer({ children, className = "" }) {
   return (
-    <div className="flex flex-1 p-2.5 m-2.5">{childern}</div>
-  )
+    <div className={`p-2.5 m-2.5 ${className}`}>
+      {children}
+    </div>
+  );
 }
