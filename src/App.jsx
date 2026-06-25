@@ -8,17 +8,18 @@ import Recipe from "./components/Recipe";
 
 export default function App() {
   const [foodData, setFoodData] = useState([]);
-  const [foodId,setFoodId] = useState("656329")
+  const [foodId, setFoodId] = useState("656329");
   return (
     <div>
       <Nav />
       <Search foodData={foodData} setFoodData={setFoodData} />
       <Container>
-        <InnerContainer>
+        <InnerContainer className="w-[350px]">
           <FoodList setFoodId={setFoodId} foodData={foodData} />
         </InnerContainer>
-        <InnerContainer>
-          <Recipe foodId={foodId}/>
+
+        <InnerContainer className="flex-1">
+          <Recipe foodId={foodId} />
         </InnerContainer>
       </Container>
     </div>
