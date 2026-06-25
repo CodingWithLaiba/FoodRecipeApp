@@ -1,5 +1,7 @@
-export default function Container({children}) {
+export default function Container({ children }) {
   return (
-    <div className="flex">{children}</div>
-  )
+    <div className="flex gap-9">
+      {children}
+    </div>
+  );
 }
